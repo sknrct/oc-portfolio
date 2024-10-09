@@ -28,7 +28,7 @@ const About = () => {
     <div className="border-b border-neutral-900 pb-4" id="about-section">
       <h2 className="my-20 text-center text-4xl">
         About
-        <span className="text-neutral-500"> Me</span>
+        <span className="text-orange-500"> Me</span>
       </h2>
       <div className="flex flex-wrap items-center">
         <motion.div
@@ -48,7 +48,7 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
+            <p className="my-2 max-w-xl py-6 text-base">{ABOUT_TEXT}</p>
           </div>
         </motion.div>
       </div>

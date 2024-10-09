@@ -46,7 +46,7 @@ const Introduction = () => {
               variants={container(1)}
               initial="hidden"
               animate={hasAnimated ? "visible" : "hidden"}
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-6 tracking-tighter text-base"
             >
               {INTRO_CONTENT}
             </motion.p>
