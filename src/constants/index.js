@@ -35,6 +35,36 @@ export const EXPERIENCES = [
   },
 ];
 
+export const FORMATIONS = [
+  {
+    school: "EPSI/WIS",
+    year: "2018 - 2020",
+    skills: ["Développement web", "Gestion de projet", "Design UI/UX"],
+    description: `J'ai intégré EPSI WIS pour développer mes compétences techniqu
+                dans le web. Mon parcours m'a permis d'acquérir une solide base
+                en développement, tout en explorant des domaines comme le design
+                et la gestion de projet.`,
+  },
+  {
+    school: "EPSI/WIS",
+    year: "2018 - 2020",
+    skills: ["Développement web", "Gestion de projet", "Design UI/UX"],
+    description: `J'ai intégré EPSI WIS pour développer mes compétences techniqu
+                dans le web. Mon parcours m'a permis d'acquérir une solide base
+                en développement, tout en explorant des domaines comme le design
+                et la gestion de projet.`,
+  },
+  {
+    school: "EPSI/WIS",
+    year: "2018 - 2020",
+    skills: ["Développement web", "Gestion de projet", "Design UI/UX"],
+    description: `J'ai intégré EPSI WIS pour développer mes compétences techniqu
+                dans le web. Mon parcours m'a permis d'acquérir une solide base
+                en développement, tout en explorant des domaines comme le design
+                et la gestion de projet.`,
+  },
+];
+
 export const PROJECTS = [
   {
     title: "Booki",

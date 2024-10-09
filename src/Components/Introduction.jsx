@@ -38,7 +38,7 @@ const Introduction = () => {
               variants={container(0.5)}
               initial="hidden"
               animate={hasAnimated ? "visible" : "hidden"}
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+              className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-4xl tracking-tight text-transparent"
             >
               Développeur Web
             </motion.span>
