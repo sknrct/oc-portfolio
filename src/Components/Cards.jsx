@@ -7,7 +7,7 @@ const Cards = ({ image, title, subtitle, link, technologies }) => {
         <img src={image} alt={title} />
         <div className="flex flex-col justify-between p-4 text-white">
           <h2 className="mb-2 text-2xl font-bold">{title}</h2>
-          <p className="mb-4 text-sm font-medium">{subtitle}</p>
+          <p className="mb-4 text-base font-medium">{subtitle}</p>
           
           {/* Pour afficher les technologies en tant que tags */}
           <div className="flex flex-wrap gap-2">  {/* Ajout d'un wrapper flex et gap */}

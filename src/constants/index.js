@@ -38,30 +38,29 @@ export const EXPERIENCES = [
 export const FORMATIONS = [
   {
     school: "EPSI/WIS",
-    year: "2018 - 2020",
-    skills: ["Développement web", "Gestion de projet", "Design UI/UX"],
-    description: `J'ai intégré EPSI WIS pour développer mes compétences techniqu
-                dans le web. Mon parcours m'a permis d'acquérir une solide base
-                en développement, tout en explorant des domaines comme le design
-                et la gestion de projet.`,
+    year: "2017 - 2019",
+    skills: ["Développement web", "Gestion de projet", "Design UI/UX", "E-commerce"],
+    description: `Passionné d'informatique, je décide de rejoindre l'EPSI, une école 
+    d'informatique. J'y ai découvert les base du code. Faute de maturité je me suis 
+    réorienté chez WIS, une école de Webmarketing ou j'y découvert les métiers de la 
+    communication et du digital...`,
   },
   {
-    school: "EPSI/WIS",
-    year: "2018 - 2020",
-    skills: ["Développement web", "Gestion de projet", "Design UI/UX"],
-    description: `J'ai intégré EPSI WIS pour développer mes compétences techniqu
-                dans le web. Mon parcours m'a permis d'acquérir une solide base
-                en développement, tout en explorant des domaines comme le design
-                et la gestion de projet.`,
+    school: "ISEG",
+    year: "2020 - 2023",
+    skills: ["Communication", "Webmarketing", "Design UI/UX", "Création Graphique"],
+    description: `Compte tenu du contexte sanitaire, j'ai du faire une pause dans mes 
+    études, faute d'alternance. J'en ai profité pour intégrer une nouvelle école de 
+    communication ou j'ai perfectionné mes compétences au travers de nouveaux cours, 
+    stages et alternances...`,
   },
   {
-    school: "EPSI/WIS",
-    year: "2018 - 2020",
-    skills: ["Développement web", "Gestion de projet", "Design UI/UX"],
-    description: `J'ai intégré EPSI WIS pour développer mes compétences techniqu
-                dans le web. Mon parcours m'a permis d'acquérir une solide base
-                en développement, tout en explorant des domaines comme le design
-                et la gestion de projet.`,
+    school: "OPENCLASSROOMS",
+    year: "2023 - 2024",
+    skills: ["Développement web", "Gestion de projet", "Debugg", "Optimisation"],
+    description: `De retour à mes premiers amours, l'informatique et le développement. 
+    La prise de maturité qui fut la mienne m'a fait comprendre dans quel domaine je voulais 
+    vraiment travailler. Après une reconversion je me sens enfin là ou je dois être.`,
   },
 ];
 

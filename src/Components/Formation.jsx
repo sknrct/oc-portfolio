@@ -28,7 +28,7 @@ const Formation = () => {
                   <li key={skillIndex}>{skill}</li>
                 ))}
               </ul>
-              <p className="mb-4 to-neutral-400">{formation.description}</p>
+              <p className="mb-4 to-neutral-400 text-lg">{formation.description}</p>
             </div>
           ))}
         </div>

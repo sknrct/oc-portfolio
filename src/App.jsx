@@ -7,6 +7,7 @@ import Experience from "./Components/Experience";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Formation from "./Components/Formation";
+import BacktToTop from "./Components/BackToTop";
 
 const App = () => {
   return (
@@ -18,14 +19,30 @@ const App = () => {
 
       <div className="container mx-auto px-8">
         <Navbar />
-        <Introduction />
-        <About />
-        <Technologies />
-        <Experience />
-        <Formation />
-        <Projects />
-        <Contact />
+        <section id="introduction">
+          <Introduction />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="techno">
+          <Technologies />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="formation">
+          <Formation />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
+
+      <BacktToTop />
     </div>
   );
 };
