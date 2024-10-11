@@ -1,15 +1,15 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
-import project5 from "../assets/projects/project-5.jpg";
-import project6 from "../assets/projects/project-6.jpg";
+import project1 from "../assets/projects/Booki.png";
+import project2 from "../assets/projects/sophie-bluel.png";
+import project3 from "../assets/projects/planification.png";
+import project4 from "../assets/projects/nina-carducci.png";
+import project5 from "../assets/projects/kasa.png";
+import project6 from "../assets/projects/vieux-grimoire.png";
 import project7 from "../assets/projects/project-7.png";
 
 
 export const INTRO_CONTENT = `Titulaire d'un master en webmarketing, je me reconvertis dans le développement web, avec une appréciation pour le backend, en tant qu'autodidacte. Mes compétences en communication, design et marketing me rendent polyvalent. Je cherche un poste de développeur junior sur Nantes, Clisson, Vertou et alentours. Je parle anglais couramment et ai des notions d'italien.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `Je suis un développeur full stack passionné et autodidacte, avec un parcours en communication et design qui me rend polyvalent. Après un master en communication, je suis revenu au développement, mes premières amours. J'ai d'abord découvert des langages comme React et JavaScript en frontend, ainsi que le backend, et depuis, je prends plaisir à relever des défis techniques tout en apportant une attention particulière aux détails et à l'UX. Mon parcours atypique me permet de combiner l’aspect technique avec un vrai souci du design et de l’efficacité. En dehors du code, je suis passionné par la photo, la vidéo et les sports mécaniques.`;
 
 export const EXPERIENCES = [
   {
