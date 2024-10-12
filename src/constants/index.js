@@ -119,5 +119,5 @@ export const PROJECTS = [
 export const CONTACT = {
   address: "3 allée des rochettes, 44190 Gorges.",
   phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  email: "thibault.boucardgarda@gmail.com",
 };

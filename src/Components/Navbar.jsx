@@ -1,4 +1,5 @@
 import logo from "../assets/kevinRushLogo.png";
+import monCV from "../assets/mon-cv.pdf";
 
 
 import { Link } from 'react-scroll';
@@ -53,6 +54,13 @@ const Navbar = () => {
             {link.name}
           </Link>
         ))}
+        <a href={monCV}
+        target="blank"
+        rel="noopener noreferrer"
+        className={linkClass}
+        >
+          Mon CV
+        </a>
       </div>
     </nav>
   );
