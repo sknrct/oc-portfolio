@@ -22,7 +22,7 @@ const Introduction = () => {
   }, []);
 
   return (
-    <div className="border-b border-neutral-900 py-24 lg:mb-35">
+    <div className="border-b border-neutral-900 py-0 lg:py-24 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
