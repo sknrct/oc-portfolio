@@ -30,7 +30,7 @@ const Introduction = () => {
               variants={container(0)}
               initial="hidden"
               animate={hasAnimated ? "visible" : "hidden"}
-              className="pb-10 text-6xl tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-10 text-6xl tracking-tight lg:mt-16 lg:text-8xl text-center"
             >
               Thibault Garda
             </motion.h1>
@@ -46,7 +46,7 @@ const Introduction = () => {
               variants={container(1)}
               initial="hidden"
               animate={hasAnimated ? "visible" : "hidden"}
-              className="my-2 max-w-xl py-6 tracking-tighter text-lg"
+              className="my-2 max-w-xl py-6 tracking-tighter text-lg text-center md:text-left"
             >
               {INTRO_CONTENT}
             </motion.p>
@@ -57,7 +57,7 @@ const Introduction = () => {
             <motion.img
               initial={{ x: 100, opacity: 0 }}
               animate={hasAnimated ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 1, delay: 1.2 }}
+              transition={{ duration: 1, delay: 0.5 }}
               className="rounded-2xl"
               src={porfilePic}
               alt="Une photo de profil"

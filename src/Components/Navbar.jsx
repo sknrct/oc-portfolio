@@ -1,8 +1,9 @@
+import { useState } from "react";
+import { Link } from "react-scroll";
+import { AiOutlineMenu } from "react-icons/ai";
+
 import logo from "../assets/kevinRushLogo.png";
 import monCV from "../assets/mon-cv.pdf";
-
-
-import { Link } from 'react-scroll';
 
 
 // const Navbar = () => {
@@ -23,6 +24,9 @@ import { Link } from 'react-scroll';
 // )}
 
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   // Tablo avec les infos des liens
   const navLinks = [
     {name: "Introduction", to: "introduction"},
@@ -62,6 +66,10 @@ const Navbar = () => {
           Mon CV
         </a>
       </div>
+
+      {isOpen && (
+        <div className="absolute top-16"></div>
+      )}
     </nav>
   );
 };
