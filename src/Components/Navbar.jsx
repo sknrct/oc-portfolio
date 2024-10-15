@@ -58,7 +58,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-16 left-0 right-0 rounded-xl bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(253,118,0,0.3),rgba(255,255,255,0))] z-50 shadow-md p-4 flex flex-col items-center space-y-4 transform transition-all duration-500 ease-in-out ${
+        className={`absolute border-orange-500 border-2 top-16 left-0 right-0 rounded-xl bg-neutral-950 z-50 shadow-md p-4 flex flex-col items-center space-y-4 transform transition-all duration-500 ease-in-out ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >

@@ -2,7 +2,7 @@ import { PROJECTS } from "../constants";
 
 const Cards = ({ image, title, subtitle, link, technologies }) => {
   return (
-    <a href={link} className="m-4 block max-w-sm overflow-hidden rounded-lg">
+    <a href={link} className="m-4 block max-w-sm overflow-hidden rounded-lg mb-6">
       <div className="relative">
         <img src={image} alt={title} />
         <div className="flex flex-col justify-between p-4 text-white">

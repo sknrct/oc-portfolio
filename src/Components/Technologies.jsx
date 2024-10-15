@@ -58,7 +58,7 @@ const Technologies = () => {
             className="group relative rounded-2xl border-4 border-neutral-800 p-4  hover:border-orange-500"
           >
             {tech.icon}
-            <div className="absolute bottom-full mb-2 hidden w-max p-2 text-sm text-white bg-gray-800 rounded-md shadow-lg group-hover:block">
+            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 hidden w-max p-2 text-sm text-white bg-gray-800 rounded-md shadow-lg group-hover:block">
               {tech.name}
             </div>
           </motion.div>

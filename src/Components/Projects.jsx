@@ -2,6 +2,7 @@ import { PROJECTS } from "../constants";
 import Cards from "./Cards";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -21,6 +22,12 @@ const itemVariants = {
 };
 
 const Projects = () => {
+  const navigate = useNavigate();
+
+  const handleProjectClick = (id) => {
+    // Redirige vers la page du projet avec l'id
+    navigate(`/project/${id}`);
+  };
   return (
     <div id="projects">
       <motion.h2
@@ -36,11 +43,23 @@ const Projects = () => {
         whileInView="visible"
         variants={containerVariants}
         viewport={{ once: true }}
-        className="flex flex-wrap justify-center py-8"
+        className="flex flex-wrap justify-evenly py-8"
       >
         {PROJECTS.map((project, index) => (
-          <motion.div variants={itemVariants} key={index}>
-            <Cards image={project.image} title={project.title} subtitle={project.description} technologies={project.technologies} link="#" />
+          <motion.div
+            variants={itemVariants}
+            key={index}
+            // Ajout du clic avec l'id du projet
+            onClick={() => handleProjectClick(project.id)}
+            className="cursor-pointer"
+          >
+            <Cards
+              image={project.image}
+              title={project.title}
+              subtitle={project.description}
+              technologies={project.technologies}
+              link="#"
+            />
           </motion.div>
         ))}
       </motion.div>
