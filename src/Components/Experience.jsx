@@ -49,11 +49,6 @@ const Experience = () => {
           </motion.div>
         </div>
       ))}
-      <div className="">Formations
-      <div className="">EPSI</div>
-      <div className="">ISEG</div>
-      <div className="">OC</div>
-      </div>
     </div>
   );
 };

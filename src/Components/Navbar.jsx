@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { useNavigate, useLocation } from "react-router-dom"; // Ajout pour la navigation
 import logo from "../assets/kevinRushLogo.png";
 import monCV from "../assets/mon-cv.pdf";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
     { name: "Introduction", to: "introduction" },
@@ -19,6 +22,16 @@ const Navbar = () => {
 
   const linkClass = "hover:text-orange-500 cursor-pointer text-white";
 
+  const handleNavigation = (section) => {
+    if (location.pathname === "/") {
+      // Si on est déjà sur la page d'accueil, on scrolle directement
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Sinon, on redirige vers la page d'accueil et on passe la section à scroll
+      navigate("/", { state: { section } });
+    }
+  };
+
   return (
     <nav className="sticky top-0 mb-20 flex items-center justify-between py-6 bg-transparent z-50">
       <div className="flex flex-shrink-0 items-center">
@@ -28,11 +41,20 @@ const Navbar = () => {
       {/* Menu Desktop */}
       <div className="hidden md:flex items-center justify-center gap-4 text-base">
         {navLinks.map((link, index) => (
-          <Link key={index} className="hover:text-orange-500 cursor-pointer" to={link.to} smooth={true} duration={1000}>
+          <button
+            key={index}
+            className={linkClass}
+            onClick={() => handleNavigation(link.to)}
+          >
             {link.name}
-          </Link>
+          </button>
         ))}
-        <a href={monCV} target="blank" rel="noopener noreferrer" className="hover:text-orange-500 cursor-pointer">
+        <a
+          href={monCV}
+          target="blank"
+          rel="noopener noreferrer"
+          className="hover:text-orange-500 cursor-pointer"
+        >
           Mon CV
         </a>
       </div>
@@ -49,7 +71,7 @@ const Navbar = () => {
       </div>
 
       {/* Overlay pour le menu ouvert */}
-       {isOpen && (
+      {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={() => setIsOpen(false)}
@@ -63,18 +85,23 @@ const Navbar = () => {
         } overflow-hidden`}
       >
         {navLinks.map((link, index) => (
-          <Link
+          <button
             key={index}
             className={linkClass}
-            to={link.to}
-            smooth={true}
-            duration={1000}
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              handleNavigation(link.to);
+              setIsOpen(false);
+            }}
           >
             {link.name}
-          </Link>
+          </button>
         ))}
-        <a href={monCV} target="blank" rel="noopener noreferrer" className={linkClass}>
+        <a
+          href={monCV}
+          target="blank"
+          rel="noopener noreferrer"
+          className={linkClass}
+        >
           Mon CV
         </a>
       </div>

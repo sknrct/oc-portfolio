@@ -13,7 +13,7 @@ const Formation = () => {
         Formations
       </motion.h2>
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:px-10">
           {FORMATIONS.map((formation, index) => (
             <div
               key={index}

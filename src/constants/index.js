@@ -66,12 +66,16 @@ export const FORMATIONS = [
 
 export const PROJECTS = [
   {
+    id: 1,
     title: "Booki",
     image: project1,
     description:
       "Création de la page d'accueil d'un agence de voyage en HTML & CSS.",
     technologies: ["Frontend", "HTML", "CSS", "Figma"],
-  },
+    issues: ["Frontend", "HTML", "CSS", "Figma"],
+    skills: ["Adaptabilité", "Chercher infos", "CSS", "Figma"],
+    githubLink: "https://github.com/username/booki"
+    },
   {
     title: "Sohpie Bluel",
     image: project2,

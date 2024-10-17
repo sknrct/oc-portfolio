@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 import { PROJECTS } from "../constants";
 import Cards from "./Cards";
 
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -25,9 +26,9 @@ const Projects = () => {
   const navigate = useNavigate();
 
   const handleProjectClick = (id) => {
-    // Redirige vers la page du projet avec l'id
     navigate(`/project/${id}`);
   };
+
   return (
     <div id="projects">
       <motion.h2
