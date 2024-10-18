@@ -72,9 +72,13 @@ export const PROJECTS = [
     description:
       "Création de la page d'accueil d'un agence de voyage en HTML & CSS.",
     technologies: ["Frontend", "HTML", "CSS", "Figma"],
-    issues: ["Frontend", "HTML", "CSS", "Figma"],
-    skills: ["Adaptabilité", "Chercher infos", "CSS", "Figma"],
-    githubLink: "https://github.com/username/booki"
+    cahierDesCharges: `Le but de ce projet était de créer la page d'acceuil d'une agence de voyage en HTML & CSS. 
+    La mission principale était d'intégrer l'interface responsive du site. J'avais à disposition une maquette Figma 
+    pour les différents supports (Desktop, Tablette et Mobile). `,
+    issues: `Ce projet étant le premier d'une longue série, la difficulté principale fût de retrouver la logique recquise 
+    pour le développement. Ainsi, je devais me remémorer mon apprentissage du BTS et apprendre de nouvelles chose tout en mettant le tout en pratique.`,
+    skills: `Cependant ce projet fût une excellente manière de se remettre en scelle ! La connaissance vient en pratiquant, j'ai donc retrouvé des automatismes plus solides, un process de travail plus précis pour respecter le cahier des charges. `,
+    githubLink: "https://github.com/sknrct/OC-Projet1-BOOKI"
     },
   {
     title: "Sohpie Bluel",
