@@ -81,46 +81,81 @@ export const PROJECTS = [
     githubLink: "https://github.com/sknrct/OC-Projet1-BOOKI"
     },
   {
+    id: 2,
     title: "Sohpie Bluel",
     image: project2,
     description:
       "Création d'une page web dynamique en Javascript et en communiquant avec une API.",
     technologies: ["Frontend", "JavaScript", "Swagger"],
+    cahierDesCharges: `Ce projet implique la création d'une page web dynamique pour une architecte d'intérieur en utilisant Javascript et en communiquant avec une API.
+    Je n'ai travaillé que sur la partie Front pour développer la page de présentation des travaux de l'architecte, une modale permettant d'uploader de nouveaux médias ainsi que la page de connexion pour l'administrateur. Cela implique la gestion des évènements utilisateurs et la manipulation des éléments du DOM avec JavaScript.`,
+    issues: `Ce projet était la première grande marche de la formation. Je suis passé d'un langage de balisage simple à un langage de programmation. La logique n'est donc pas la même mais quelle suprise ! J'ai fortement apprécié cette rencontre avec la difficulté qui m'a donné envie d'en savoir encore plus pour venir à bout du projet.`,
+    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
+    githubLink: "https://github.com/sknrct/oc-js"
   },
   {
+    id: 3,
     title: "Meny Maker by Qwenta",
     image: project3,
     description:
       "Planification du développement du site d'un client. Gestion de projet et veille.",
     technologies: ["Frontend", "Notion", "Gestion de projet"],
+    cahierDesCharges: `Avec ce projet, très peu de technique mais beaucoup de recherches et de rélfexions. Je devais plannifier le développment du site d'un client. Pour ce faire j'avais à ma disposition les maquettes, spécifications fonctionnelles et les User Stories du site. Il fallait mettre en place une veille technologique, rédiger spécifications techniques et faire de la gestion de projet via un Kanban.`,
+    issues: `J'ai déja eu à faire de la gestion de projet par le passé, mais pas dans le développement.`,
+    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
+    githubLink: "https://github.com/sknrct/oc-js"
   },
   {
+    id: 4,
     title: "Nina Carducci",
     image: project4,
     description:
       "Debugg et optimisation du référencement du site d'une photographe.",
     technologies: ["Frontend", "JavaScript", "Debugg"],
+    cahierDesCharges: `Ce projet implique la création d'une page web dynamique pour une architecte d'intérieur en utilisant Javascript et en communiquant avec une API.
+    Je n'ai travaillé que sur la partie Front pour développer la page de présentation des travaux de l'architecte, une modale permettant d'uploader de nouveaux médias ainsi que la page de connexion pour l'administrateur. Cela implique la gestion des évènements utilisateurs et la manipulation des éléments du DOM avec JavaScript.`,
+    issues: `Ce projet était la première grande marche de la formation. Je suis passé d'un langage de balisage simple à un langage de programmation. La logique n'est donc pas la même mais quelle suprise ! J'ai fortement apprécié cette rencontre avec la difficulté qui m'a donné envie d'en savoir encore plus pour venir à bout du projet.`,
+    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
+    githubLink: "https://github.com/sknrct/oc-js"
   },
   {
+    id: 5,
     title: "Kasa",
     image: project5,
     description:
       "Création d'une application web de location immobilière avec React.",
     technologies: ["Frontend","React", "NodeJs", "SaSS"],
+    cahierDesCharges: `Ce projet implique la création d'une page web dynamique pour une architecte d'intérieur en utilisant Javascript et en communiquant avec une API.
+    Je n'ai travaillé que sur la partie Front pour développer la page de présentation des travaux de l'architecte, une modale permettant d'uploader de nouveaux médias ainsi que la page de connexion pour l'administrateur. Cela implique la gestion des évènements utilisateurs et la manipulation des éléments du DOM avec JavaScript.`,
+    issues: `Ce projet était la première grande marche de la formation. Je suis passé d'un langage de balisage simple à un langage de programmation. La logique n'est donc pas la même mais quelle suprise ! J'ai fortement apprécié cette rencontre avec la difficulté qui m'a donné envie d'en savoir encore plus pour venir à bout du projet.`,
+    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
+    githubLink: "https://github.com/sknrct/oc-js"
   },
   {
+    id: 6,
     title: "Mon Vieux Grimoire",
     image: project6,
     description:
       "Dévelomment du back-end d'un site de notation de livres",
     technologies: ["Backend", "NodeJs", "MongoDB", "Express"],
+    cahierDesCharges: `Ce projet implique la création d'une page web dynamique pour une architecte d'intérieur en utilisant Javascript et en communiquant avec une API.
+    Je n'ai travaillé que sur la partie Front pour développer la page de présentation des travaux de l'architecte, une modale permettant d'uploader de nouveaux médias ainsi que la page de connexion pour l'administrateur. Cela implique la gestion des évènements utilisateurs et la manipulation des éléments du DOM avec JavaScript.`,
+    issues: `Ce projet était la première grande marche de la formation. Je suis passé d'un langage de balisage simple à un langage de programmation. La logique n'est donc pas la même mais quelle suprise ! J'ai fortement apprécié cette rencontre avec la difficulté qui m'a donné envie d'en savoir encore plus pour venir à bout du projet.`,
+    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
+    githubLink: "https://github.com/sknrct/oc-js"
   },
   {
+    id: 7,
     title: "Portfolio",
     image: project7,
     description:
       "Création et publication d'un portfolio de développeur.",
     technologies: ["React", "Tailwind"],
+    cahierDesCharges: `Ce projet implique la création d'une page web dynamique pour une architecte d'intérieur en utilisant Javascript et en communiquant avec une API.
+    Je n'ai travaillé que sur la partie Front pour développer la page de présentation des travaux de l'architecte, une modale permettant d'uploader de nouveaux médias ainsi que la page de connexion pour l'administrateur. Cela implique la gestion des évènements utilisateurs et la manipulation des éléments du DOM avec JavaScript.`,
+    issues: `Ce projet était la première grande marche de la formation. Je suis passé d'un langage de balisage simple à un langage de programmation. La logique n'est donc pas la même mais quelle suprise ! J'ai fortement apprécié cette rencontre avec la difficulté qui m'a donné envie d'en savoir encore plus pour venir à bout du projet.`,
+    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
+    githubLink: "https://github.com/sknrct/oc-js"
   },
 ];
 

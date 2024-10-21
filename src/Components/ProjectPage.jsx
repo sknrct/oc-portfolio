@@ -80,7 +80,7 @@ const ProjectPage = () => {
                   variants={container(1)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center"
+                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
                 >
                   {project.cahierDesCharges}
                 </motion.p>
@@ -96,7 +96,7 @@ const ProjectPage = () => {
                   variants={container(2)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center"
+                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
                 >
                   {project.issues}
                 </motion.p>
@@ -112,7 +112,7 @@ const ProjectPage = () => {
                   variants={container(3)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center"
+                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
                 >
                   {project.skills}
                 </motion.p>
