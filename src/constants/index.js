@@ -146,11 +146,10 @@ export const PROJECTS = [
     description:
       "Création et publication d'un portfolio de développeur.",
     technologies: ["React", "Tailwind"],
-    cahierDesCharges: `Ce projet implique la création d'une page web dynamique pour une architecte d'intérieur en utilisant Javascript et en communiquant avec une API.
-    Je n'ai travaillé que sur la partie Front pour développer la page de présentation des travaux de l'architecte, une modale permettant d'uploader de nouveaux médias ainsi que la page de connexion pour l'administrateur. Cela implique la gestion des évènements utilisateurs et la manipulation des éléments du DOM avec JavaScript.`,
-    issues: `Ce projet était la première grande marche de la formation. Je suis passé d'un langage de balisage simple à un langage de programmation. La logique n'est donc pas la même mais quelle suprise ! J'ai fortement apprécié cette rencontre avec la difficulté qui m'a donné envie d'en savoir encore plus pour venir à bout du projet.`,
-    skills: `Grâce à cet exercice nouveau, j'ai pu mettre un vrai pas dans la programmation, les choses sont devenues sérieuses. J'ai appréhendé le JavaScript, découvert le JSON, les API et ai eu un premier apercu de ce qu'est un Backend.`,
-    githubLink: "https://github.com/sknrct/oc-js"
+    cahierDesCharges: `Voici le projet que j'attendais le plus ! En effet cela fait longtemps que je souhaite créer un portfolio. Celui-ci pouvait être fait avec la technologie de mon choix, c'est donc naturellement que j'ai choisis React ! Pour le style, j'ai opté pour Tailwind, j'étais très curieux de tester cette technologie dont j'ai beaucoup entendu parler. Le portfolio doit présenter au moins deux projets et présenter de manière claire mes compétences et mon parcours en développement...mais pas que. Evidemment le référencement et le responsive doivent être présent, ainsi qu'un code optimisé.`,
+    issues: `La principale difficulté de ce projet fut le temps. En effet, j'ai envie de créer un portfolio depuis un moment déjà, de ce fait j'ai eu beaucoup...beaucoup (trop) d'idées. Il a donc fallu prioriser en fonction de plusieurs critères (techniques, utiles, temps).`,
+    skills: `Avec ce projet j'ai pu approfondir un peu plus l'usage de React, consolider certains acquis et apprendre de nouvelles choses. J'ai aussi pu découvrir Tailwind que j'ai trouvé très pratique et avec une documentation particulièrement claire. Enfin la notion principale, le temps, j'ai du gérer ce facteur important via une organisation la plus précise possible.`,
+    githubLink: "https://github.com/sknrct/oc-portfolio"
   },
 ];
 

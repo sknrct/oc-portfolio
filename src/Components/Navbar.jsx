@@ -54,7 +54,7 @@ const Navbar = () => {
         href={monCV}
         target="blank"
         rel="noopener noreferrer"
-        className="hover:text-orange-500 cursor-pointer"
+        className="hover:text-orange-500 cursor-pointer text-white"
       >
         Mon CV
       </a>
