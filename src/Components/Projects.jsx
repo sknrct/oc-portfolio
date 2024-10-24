@@ -59,7 +59,6 @@ const Projects = () => {
               title={project.title}
               subtitle={project.description}
               technologies={project.technologies}
-              link="#"
             />
           </motion.div>
         ))}

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useNavigate, useLocation } from "react-router-dom"; // Ajout pour la navigation
 import logo from "../assets/TBG.svg";
@@ -43,7 +42,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 py-6 bg-transparent z-50">
+    <nav className="sticky top-0 py-6 bg-transparent z-50" id="navbar">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-shrink-0 items-center">
           <img

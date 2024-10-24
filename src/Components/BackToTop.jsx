@@ -36,7 +36,7 @@ const BacktToTop = () => {
             {isVisible && (
                 <button
                 onClick={scrollToTop}
-                className='fixed bottom-4 right-4 z-50 p-3 rounded-full bg-orange-500 text-white hover:bg-orange-600 shadow-lg'
+                className='fixed bottom-4 right-4 z-50 p-3 rounded-full bg-orange-500 text-white hover:bg-orange-600 shadow-lg text-2xl'
                 >
                     <FaCircleArrowUp />
                 </button>

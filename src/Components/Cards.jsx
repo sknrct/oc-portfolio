@@ -10,7 +10,7 @@ const Cards = ({ image, title, subtitle, link, technologies }) => {
           <p className="mb-4 text-base font-medium">{subtitle}</p>
           
           {/* Pour afficher les technologies en tant que tags */}
-          <div className="flex flex-wrap gap-2">  {/* Ajout d'un wrapper flex et gap */}
+          <div className="flex flex-wrap gap-2">
             {technologies.map((technologies, index) => (
               <span
                 key={index}

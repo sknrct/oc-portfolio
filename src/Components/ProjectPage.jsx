@@ -25,6 +25,20 @@ const ProjectPage = () => {
     setHasAnimated(true);
   }, []);
 
+  useEffect(() => {
+  if (window.location.hash) {
+    window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
+  }
+}, []);
+
+useEffect(() => {
+  if (window.location.hash) {
+    console.log("Hash found and removed:", window.location.hash);
+    window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
+  }
+}, []);
+
+
   if (!project) {
     return (
       <div className="text-center text-red-500">
