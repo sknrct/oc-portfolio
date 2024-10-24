@@ -1,10 +1,10 @@
-import project1 from "../assets/projects/Booki.png";
-import project2 from "../assets/projects/sophie-bluel.png";
-import project3 from "../assets/projects/planification.png";
-import project4 from "../assets/projects/nina-carducci.png";
-import project5 from "../assets/projects/kasa.png";
-import project6 from "../assets/projects/vieux-grimoire.png";
-import project7 from "../assets/projects/project-7.png";
+import project1 from "../assets/projects/Booki.webp";
+import project2 from "../assets/projects/sophie-bluel.webp";
+import project3 from "../assets/projects/planification.webp";
+import project4 from "../assets/projects/nina-carducci.webp";
+import project5 from "../assets/projects/kasa.webp";
+import project6 from "../assets/projects/vieux-grimoire.webp";
+import project7 from "../assets/projects/portfolio.webp";
 
 
 export const INTRO_CONTENT = `Titulaire d'un master en webmarketing, je me reconvertis dans le développement web, avec une appréciation pour le backend, en tant qu'autodidacte. Mes compétences en communication, design et marketing me rendent polyvalent. Je cherche un poste de développeur junior sur Nantes, Clisson, Vertou et alentours. Je parle anglais couramment et ai des notions d'italien.`;

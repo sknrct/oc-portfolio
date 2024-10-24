@@ -12,16 +12,15 @@ const Formation = () => {
       >
         Formations
       </motion.h2>
-      <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:px-10">
+      <div className="container mx-auto px-4 py-8 flex flex-wrap">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:px-10">
           {FORMATIONS.map((formation, index) => (
             <div
               key={index}
               className="max-w-md w-full p-6 shadow-lg rounded-lg border-4 border-neutral-800 bg-transparent mx-auto"
             >
               <h3 className="text-2xl font-semibold mb-4">
-                {formation.school} -{" "}
-                <span className="text-orange-500">{formation.year}</span>
+                {formation.school} - <span className="text-orange-500">{formation.year}</span>
               </h3>
               <ul className="list-disc list-inside mb-4">
                 {formation.skills.map((skill, skillIndex) => (
