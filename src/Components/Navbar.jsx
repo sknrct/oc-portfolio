@@ -11,11 +11,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Introduction", to: "introduction" },
-    { name: "About Me", to: "about" },
+    { name: "A propos", to: "about" },
     { name: "Technologies", to: "techno" },
     { name: "Experiences", to: "experience" },
     { name: "Formations", to: "formation" },
-    { name: "Projects", to: "projects" },
+    { name: "Projets", to: "projects" },
     { name: "Contact", to: "contact" },
   ];
 
@@ -68,7 +68,7 @@ const Navbar = () => {
             href={monCV}
             target="blank"
             rel="noopener noreferrer"
-            className="hover:text-orange-500 cursor-pointer"
+            className="hover:text-orange-500 cursor-pointer text-white"
           >
             Mon CV
           </a>

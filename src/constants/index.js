@@ -78,7 +78,7 @@ export const PROJECTS = [
     },
   {
     id: 2,
-    title: "Sohpie Bluel",
+    title: "Sophie Bluel",
     image: project2,
     description:
       "Création d'une page web dynamique en Javascript et en communiquant avec une API.",
@@ -93,7 +93,7 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "Meny Maker by Qwenta",
+    title: "Menu Maker by Qwenta",
     image: project3,
     description:
       "Planification du développement du site d'un client. Gestion de projet et veille.",
