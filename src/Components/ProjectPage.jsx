@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { PROJECTS } from "../constants";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
@@ -19,11 +19,16 @@ const ProjectPage = () => {
   const { id } = useParams();
   const project = PROJECTS.find((proj) => proj.id === parseInt(id));
   const [hasAnimated, setHasAnimated] = useState(false);
+  const navigate = useNavigate();
 
   // Jouer l'animation une seule fois au chargement de la page
   useEffect(() => {
     setHasAnimated(true);
   }, []);
+
+  const handleGoBack = () => {
+    navigate(-1);
+  }
 
   useEffect(() => {
   if (window.location.hash) {
@@ -51,8 +56,14 @@ useEffect(() => {
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-orange-500">
       <div className="container mx-auto px-8">
-      <Navbar />
+        <Navbar />
         <div className="border-b border-neutral-900 py-12 lg:py-24 lg:mb-35">
+          <button
+            onClick={handleGoBack}
+            className="text-orange-500 hover:to-orange-600 text-sm underline underline-offset-1 font-medium lg:mx-10 flex justify-center"
+          >
+            &lt; Retour aux projets
+          </button>
           <div className="container mx-auto px-8 flex flex-wrap items-center">
             {/* Partie texte */}
             <div className="w-full lg:w-1/2">
@@ -65,6 +76,7 @@ useEffect(() => {
                 >
                   {project.title}
                 </motion.h1>
+
                 {/* Liste des technologies utilisées */}
                 <motion.div
                   variants={container(0.5)}
@@ -75,55 +87,77 @@ useEffect(() => {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="mr-2 rounded bg-neutral-900 px-2 py-1
-                    text-sm font-medium text-orange-500"
+                      className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-orange-500"
                     >
                       {tech}
                     </span>
                   ))}
                 </motion.div>
+
+                {/* Description */}
                 <motion.h2
-                  variants={container(0.5)}
+                  variants={container(1)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="text-3xl font-semibold text-orange-500 mb-4"
                 >
                   Description
                 </motion.h2>
+
                 <motion.p
-                  variants={container(1)}
+                  variants={container(1.5)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
                 >
-                  {project.cahierDesCharges}
+                  {project.cahierDesCharges.map((part, index) =>
+                    typeof part === 'string' ? (
+                      part
+                    ) : (
+                      <a
+                        key={index}
+                        href={part.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-500 underline"
+                      >
+                        {part.text}
+                      </a>
+                    )
+                  )}
                 </motion.p>
+
+                {/* Problématiques rencontrées */}
                 <motion.h2
-                  variants={container(1.5)}
+                  variants={container(2)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="text-3xl font-semibold text-orange-500 mb-4 text-center"
                 >
                   Problématiques rencontrées
                 </motion.h2>
+
                 <motion.p
-                  variants={container(2)}
+                  variants={container(2.5)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
                 >
                   {project.issues}
                 </motion.p>
+
+                {/* Compétences acquises */}
                 <motion.h2
-                  variants={container(2.5)}
+                  variants={container(3)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="text-3xl font-semibold text-orange-500 mb-4 text-center"
                 >
                   Compétences acquises
                 </motion.h2>
+
                 <motion.p
-                  variants={container(3)}
+                  variants={container(3.5)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
@@ -144,9 +178,9 @@ useEffect(() => {
                   src={project.image}
                   alt={project.title}
                 />
-                {/* Partie bouton */}
+                {/* Bouton voir le projet */}
                 <motion.div
-                  variants={container(2)}
+                  variants={container(4)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   className="text-center flex justify-center mt-8"
@@ -155,9 +189,9 @@ useEffect(() => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300"
+                    className="inline-block bg-orange-500 text-white px-10 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300 text-lg"
                   >
-                    Voir le projet sur GitHub
+                    Voir le projet
                   </a>
                 </motion.div>
               </div>

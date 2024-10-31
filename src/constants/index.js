@@ -5,6 +5,7 @@ import project4 from "../assets/projects/nina-carducci.webp";
 import project5 from "../assets/projects/kasa.webp";
 import project6 from "../assets/projects/vieux-grimoire.webp";
 import project7 from "../assets/projects/portfolio.webp";
+import project8 from "../assets/projects/ccdfr.webp";
 
 
 export const INTRO_CONTENT = `Titulaire d'un master en webmarketing, je me reconvertis dans le développement web, avec une appréciation pour le backend, en tant qu'autodidacte. Mes compétences en communication, design et marketing me rendent polyvalent. Je cherche un poste de développeur junior sur Nantes, Clisson, Vertou et alentours. Je parle anglais couramment et ai des notions d'Italien.`;
@@ -148,6 +149,19 @@ export const PROJECTS = [
     issues: `La principale difficulté de ce projet fut le temps. En effet, j'ai envie de créer un portfolio depuis un moment déjà, de ce fait, j'ai eu beaucoup... Beaucoup (trop) d'idées. Il a donc fallu prioriser en fonction de plusieurs critères (techniques, utiles, temps).`,
     skills: `Avec ce projet, j'ai pu approfondir un peu plus l'usage de React, consolider certains acquis et apprendre de nouvelles choses. J'ai aussi pu découvrir Tailwind que j'ai trouvé très pratique et avec une documentation particulièrement claire. Enfin la notion principale, le temps, j'ai dû gérer ce facteur important via une organisation la plus précise possible.`,
     githubLink: "https://github.com/sknrct/oc-portfolio"
+  },
+  {
+    id: 8,
+    title: "Calculatrice de prêt immobilier",
+    image: project8,
+    description:
+      "Création d'un site web pour un courtier immobilier",
+    technologies: ["PHP", "JavaScript", "WordPress"],
+    cahierDesCharges: [ `Dans le cadre de mon alternance chez`, { text: " Infoconception ", link: "https://www.infoconception.fr" }, `j'ai du créer plusieurs sites web notamment celui-ci à partir d'un thème WordPress. Il y'a eu du développement spécifique avec la création d'une calculatrice de prêt immobilier`,
+  ],
+    issues: `J'ai du apprendre sur le tas comment créer une calculatrice et gérer des calculs, le tout avec PHP et Javascript. De plus lors de la confection, il y'avait un délais assez long entre la saisie des données et le calcul, ce qui rend l'expérience utilisateur peu agréable.`,
+    skills: `Je suis assez fier de cette calculatrice car j'ai dû apprendre en faisant et j'ai finalement réussi à obtenir un résultat qui me convient et qui convient au client. Je me suis senti plus autonome en PHP par la suite. J'ai appris à utiliser des ACF (Advanced Custom Field), un plugin WordPress qui permet d'appeler des champs de données, de la même manière qu'un JSON.`,
+    githubLink: "https://www.creditcourtierdefrance.com/"
   },
 ];
 
