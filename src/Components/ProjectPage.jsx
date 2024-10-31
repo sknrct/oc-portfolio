@@ -28,21 +28,20 @@ const ProjectPage = () => {
 
   const handleGoBack = () => {
     navigate(-1);
-  }
+  };
 
   useEffect(() => {
-  if (window.location.hash) {
-    window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
-  }
-}, []);
+    if (window.location.hash) {
+      window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
+    }
+  }, []);
 
-useEffect(() => {
-  if (window.location.hash) {
-    console.log("Hash found and removed:", window.location.hash);
-    window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
-  }
-}, []);
-
+  useEffect(() => {
+    if (window.location.hash) {
+      console.log("Hash found and removed:", window.location.hash);
+      window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
+    }
+  }, []);
 
   if (!project) {
     return (
@@ -60,14 +59,14 @@ useEffect(() => {
         <div className="border-b border-neutral-900 py-12 lg:py-24 lg:mb-35">
           <button
             onClick={handleGoBack}
-            className="text-orange-500 hover:to-orange-600 text-sm underline underline-offset-1 font-medium lg:mx-10 flex justify-center"
+            className="text-white bg-orange-500 p-1.5 rounded-lg hover:to-orange-600 text-sm font-medium lg:mx-10 flex justify-center mx-auto mb-10"
           >
             &lt; Retour aux projets
           </button>
           <div className="container mx-auto px-8 flex flex-wrap items-center">
             {/* Partie texte */}
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col items-center lg:items-start">
+              <div className="flex flex-col  lg:items-start">
                 <motion.h1
                   variants={container(0)}
                   initial="hidden"
@@ -99,7 +98,7 @@ useEffect(() => {
                   variants={container(1)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="text-3xl font-semibold text-orange-500 mb-4"
+                  className="text-3xl font-semibold text-orange-500 mb-4 text-left"
                 >
                   Description
                 </motion.h2>
@@ -108,22 +107,26 @@ useEffect(() => {
                   variants={container(1.5)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
+                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-left lg:text-left"
                 >
-                  {project.cahierDesCharges.map((part, index) =>
-                    typeof part === 'string' ? (
-                      part
-                    ) : (
-                      <a
-                        key={index}
-                        href={part.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-orange-500 underline"
-                      >
-                        {part.text}
-                      </a>
+                  {Array.isArray(project.cahierDesCharges) ? (
+                    project.cahierDesCharges.map((part, index) =>
+                      typeof part === "string" ? (
+                        <span key={index}>{part}</span>
+                      ) : (
+                        <a
+                          key={index}
+                          href={part.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-orange-500 underline"
+                        >
+                          {part.text}
+                        </a>
+                      )
                     )
+                  ) : (
+                    <span>{project.cahierDesCharges}</span>
                   )}
                 </motion.p>
 
@@ -132,7 +135,7 @@ useEffect(() => {
                   variants={container(2)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="text-3xl font-semibold text-orange-500 mb-4 text-center"
+                  className="text-3xl font-semibold text-orange-500 mb-4 text-left"
                 >
                   Problématiques rencontrées
                 </motion.h2>
@@ -141,7 +144,7 @@ useEffect(() => {
                   variants={container(2.5)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
+                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-left lg:text-left"
                 >
                   {project.issues}
                 </motion.p>
@@ -151,7 +154,7 @@ useEffect(() => {
                   variants={container(3)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="text-3xl font-semibold text-orange-500 mb-4 text-center"
+                  className="text-3xl font-semibold text-orange-500 mb-4 text-left"
                 >
                   Compétences acquises
                 </motion.h2>
@@ -160,7 +163,7 @@ useEffect(() => {
                   variants={container(3.5)}
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
-                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-center lg:text-left"
+                  className="mb-12 text-lg leading-relaxed text-neutral-400 text-left lg:text-left"
                 >
                   {project.skills}
                 </motion.p>

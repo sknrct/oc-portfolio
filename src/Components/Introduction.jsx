@@ -30,7 +30,7 @@ const Introduction = () => {
               variants={container(0)}
               initial="hidden"
               animate={hasAnimated ? "visible" : "hidden"}
-              className="pb-10 text-6xl tracking-tight lg:mt-16 lg:text-8xl text-center"
+              className="pb-10 pt-10 text-6xl tracking-tight lg:mt-16 lg:text-8xl text-center"
             >
               Thibault Garda
             </motion.h1>
@@ -46,7 +46,7 @@ const Introduction = () => {
               variants={container(1)}
               initial="hidden"
               animate={hasAnimated ? "visible" : "hidden"}
-              className="my-2 max-w-xl py-6 text-lg text-center md:text-left"
+              className="my-2 max-w-xl py-6 text-lg text-left md:text-left"
             >
               {INTRO_CONTENT}
             </motion.p>
