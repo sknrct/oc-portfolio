@@ -144,7 +144,7 @@ export const PROJECTS = [
     image: project7,
     description:
       "Création et publication d'un portfolio de développeur.",
-    technologies: ["React", "Tailwind"],
+    technologies: ["React", "Tailwind", "Vite"],
     cahierDesCharges: `Voici le projet que j'attendais le plus ! En effet, cela fait longtemps que je souhaite créer un portfolio. Celui-ci pouvait être fait avec la technologie de mon choix, c'est donc naturellement que j'ai choisis React ! Pour le style, j'ai opté pour Tailwind, j'étais très curieux de tester cette technologie dont j'ai beaucoup entendu parler. Le portfolio doit présenter au moins deux projets et présenter de manière claire mes compétences et mon parcours en développement... Mais pas que. Évidemment le référencement et le responsive doivent être présent, ainsi qu'un code optimisé.`,
     issues: `La principale difficulté de ce projet fut le temps. En effet, j'ai envie de créer un portfolio depuis un moment déjà, de ce fait, j'ai eu beaucoup... Beaucoup (trop) d'idées. Il a donc fallu prioriser en fonction de plusieurs critères (techniques, utiles, temps).`,
     skills: `Avec ce projet, j'ai pu approfondir un peu plus l'usage de React, consolider certains acquis et apprendre de nouvelles choses. J'ai aussi pu découvrir Tailwind que j'ai trouvé très pratique et avec une documentation particulièrement claire. Enfin la notion principale, le temps, j'ai dû gérer ce facteur important via une organisation la plus précise possible.`,
