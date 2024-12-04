@@ -62,6 +62,13 @@ export const FORMATIONS = [
     La prise de maturité qui fut la mienne m'a fait comprendre dans quel domaine je voulais 
     vraiment travailler. Après une reconversion, je me sens enfin là où je dois être.`,
   },
+  {
+    school: "CODELYNX",
+    year: "2024",
+    skills: ["Fondamentaux", "Composants", "Hooks", "Patterns", "Workshops"],
+    description: `Formation React afin de me perfectionner dans la pratique de ce framework 
+    à travers de nombreux exercices, tests et leçons.`,
+  },
 ];
 
 export const PROJECTS = [

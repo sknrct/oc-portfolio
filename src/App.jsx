@@ -19,11 +19,11 @@ const MainPage = () => (
     <section id="introduction">
       <Introduction />
     </section>
-    <section id="about">
-      <About />
-    </section>
     <section id="techno">
       <Technologies />
+    </section>
+    <section id="about">
+      <About />
     </section>
     <section id="experience">
       <Experience />

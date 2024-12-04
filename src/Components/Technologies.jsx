@@ -25,9 +25,15 @@ const technologies = [
   { name: "React", icon: <RiReactjsLine className="text-7xl text-cyan-400" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-7xl text-green-500" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-7xl text-green-500" /> },
-  { name: "JavaScript", icon: <RiJavascriptFill className="text-7xl text-yellow-400" /> },
+  {
+    name: "JavaScript",
+    icon: <RiJavascriptFill className="text-7xl text-yellow-400" />,
+  },
   { name: "Figma", icon: <LuFigma className="text-7xl text-red-500" /> },
-  { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-7xl text-sky-500" /> },
+  {
+    name: "Tailwind CSS",
+    icon: <RiTailwindCssFill className="text-7xl text-sky-500" />,
+  },
   { name: "HTML5", icon: <FaHtml5 className="text-7xl text-orange-500" /> },
   { name: "CSS3", icon: <IoLogoCss3 className="text-7xl text-blue-500" /> },
 ];
@@ -35,15 +41,8 @@ const technologies = [
 const Technologies = () => {
   return (
     <div id="techno" className="border-b border-neutral-800 pb-24">
-      <motion.h2 
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Technologies
-      </motion.h2>
-      <motion.div 
+      <h2 className="my-20 text-center text-4xl">Technologies</h2>
+      <motion.div
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
