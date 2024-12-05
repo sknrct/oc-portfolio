@@ -46,7 +46,7 @@ const Projects = () => {
               selectedTechnology === tech
                 ? "bg-orange-500 text-white"
                 : "text-orange-500"
-            } hover:bg-orange-300`}
+            } hover:bg-orange-500 hover:text-white`}
           >
             {tech}
           </button>

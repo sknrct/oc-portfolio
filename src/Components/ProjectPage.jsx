@@ -131,7 +131,7 @@ const ProjectPage = () => {
                     rel="noopener noreferrer"
                     className="inline-block bg-orange-500 text-white px-10 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300 text-lg"
                   >
-                    Voir le projet
+                    Github
                   </a>
                 </div>
               </div>
