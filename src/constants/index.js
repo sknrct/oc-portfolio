@@ -188,8 +188,8 @@ export const FILTERS = [
   "Frontend",
   "Express",
   "Debugg",
-  "AJAX"
-]
+  "AJAX",
+];
 
 export const CONTACT = {
   address: "3 allée des rochettes, 44190 Gorges.",

@@ -1,12 +1,7 @@
 import aboutImg from "../assets/about.webp";
 import { ABOUT_TEXT } from "../constants";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
-// Création d'un composant pour ne pas répéter du code et rendre le tout plus maniable
-const Highlight = ({ children }) => (
-  <Highlight>{children}</Highlight>
-);
+const highlightClass = "text-orange-500 font-bold";
 
 const About = () => {
   return (
@@ -28,7 +23,7 @@ const About = () => {
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:justify-start">
             <p className="my-2 max-w-xl py-6 text-lg text-left md:text-left">
-            Je suis un développeur frontend <Highlight>passionné et autodidacte</Highlight>, avec un parcours en communication et design qui me rend <Highlight>polyvalent</Highlight>. Après un master en communication, je suis revenu au développement, mes premiers amours. J'ai d'abord découvert des langages comme <Highlight>React et JavaScript</Highlight>, ainsi que le backend avec <Highlight>NodeJS et Express</Highlight>. Je prends <Highlight>plaisir à relever des défis techniques</Highlight> tout en apportant une attention particulière aux détails et à l'UX. Mon parcours atypique me permet de combiner l’aspect technique avec un vrai souci du design et de l’<Highlight>efficacité</Highlight>. En-dehors du code, je suis passionné par la photo, la vidéo et les sports mécaniques.
+              Je suis un développeur frontend <span className={highlightClass}>passionné et autodidacte</span>, avec un parcours en communication et design qui me rend <span className={highlightClass}>polyvalent</span>. Après un master en communication, je suis revenu au développement, mes premiers amours. J'ai d'abord découvert des langages comme <span className={highlightClass}>React et JavaScript</span>, ainsi que le backend avec <span className={highlightClass}>NodeJS et Express</span>. Je prends <span className={highlightClass}> plaisir à relever des défis techniques </span>  tout en apportant une attention particulière aux détails et à l'UX. Mon parcours atypique me permet de combiner l’aspect technique avec un vrai souci du design et de l’<span className={highlightClass}>efficacité</span>. En-dehors du code, je suis passionné par la photo, la vidéo et les sports mécaniques.
             </p>
           </div>
         </div>
