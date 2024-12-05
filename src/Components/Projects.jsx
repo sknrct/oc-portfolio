@@ -1,63 +1,89 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { PROJECTS } from "../constants";
+import { PROJECTS, FILTERS } from "../constants";
 import Cards from "./Cards";
-
-import { motion } from "framer-motion";
-
-const containerVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.4,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-};
 
 const Projects = () => {
   const navigate = useNavigate();
+  const [selectedTechnology, setSelectedTechnology] = useState("All");
+  const [visibleProjectsCount, setVisibleProjectsCount] = useState(3); // Nombre de projets visibles
+
+  // Récupérer toutes les technologies uniques des projets
+  const technologies = [
+    "All",
+    ...new Set(PROJECTS.flatMap((project) => project.technologies)),
+  ];
 
   const handleProjectClick = (id) => {
     navigate(`/project/${id}`);
   };
 
+  // Filtrer les projets par technologie sélectionnée
+  const filteredProjects =
+    selectedTechnology === "All"
+      ? PROJECTS
+      : PROJECTS.filter((project) =>
+          project.technologies.includes(selectedTechnology)
+        );
+
+  // Fonction pour afficher plus de projets
+  const showMoreProjects = () => {
+    setVisibleProjectsCount((prevCount) => prevCount + 3); // Affiche 3 projets supplémentaires
+  };
+
   return (
     <div id="projects">
-      <h2
-        
-        className="my-20 text-center text-4xl"
-      >
-        Projets
-      </h2>
-      <div
-        
-        className="flex flex-wrap justify-evenly py-8"
-      >
-        {PROJECTS.map((project, index) => (
-          <div
-            
+      <h2 className="my-20 text-center text-4xl">Projets</h2>
+
+      {/* Filtres par technologies */}
+      <div className="mb-8 flex justify-center flex-wrap">
+        {FILTERS.map((tech, index) => (
+          <button
             key={index}
-            // Ajout du clic avec l'id du projet
-            onClick={() => handleProjectClick(project.id)}
-            className="cursor-pointer"
+            onClick={() => setSelectedTechnology(tech)}
+            className={`mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium ${
+              selectedTechnology === tech
+                ? "bg-orange-500 text-white"
+                : "text-orange-500"
+            } hover:bg-orange-300`}
           >
-            <Cards
-              image={project.image}
-              title={project.title}
-              subtitle={project.description}
-              technologies={project.technologies}
-            />
-          </div>
+            {tech}
+          </button>
         ))}
       </div>
+
+      {/* Liste des projets */}
+      <div className="flex flex-wrap justify-evenly py-8">
+        {filteredProjects
+          .slice(0, visibleProjectsCount)
+          .map((project, index) => (
+            <div
+              key={index}
+              onClick={() => handleProjectClick(project.id)}
+              className="cursor-pointer"
+            >
+              <Cards
+                image={project.image}
+                title={project.title}
+                subtitle={project.description}
+                technologies={project.technologies}
+              />
+            </div>
+          ))}
+      </div>
+
+      {/* Bouton "Afficher plus" */}
+      {filteredProjects.length > visibleProjectsCount && (
+        <div className="text-center mt-8">
+          <button
+            onClick={showMoreProjects}
+            className="rounded bg-orange-500 px-4 py-2 text-white font-medium hover:bg-orange-400"
+          >
+            Afficher plus
+          </button>
+        </div>
+      )}
     </div>
   );
 };

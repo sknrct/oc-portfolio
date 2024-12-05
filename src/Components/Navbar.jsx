@@ -10,11 +10,6 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Introduction", to: "introduction" },
-    { name: "A propos", to: "about" },
-    { name: "Technologies", to: "techno" },
-    { name: "Experiences", to: "experience" },
-    { name: "Formations", to: "formation" },
     { name: "Projets", to: "projects" },
     { name: "Contact", to: "contact" },
   ];
