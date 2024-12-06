@@ -1,7 +1,16 @@
-import { INTRO_CONTENT } from "../constants";
+import { INTRO_CONTENT, CONTACT } from "../constants";
 import porfilePic from "../assets/thibaultProfile.webp";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import monCV from "../assets/mon-cv.pdf";
+
+
+library.add(faEnvelope, faDownload);
+
+const buttonClass = "inline-block bg-orange-500 text-white px-5 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300 text-l"
 
 const Introduction = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -30,6 +39,21 @@ const Introduction = () => {
               alt="Une photo de profil"
             />
           </div>
+        </div>
+        <div className="mx-auto pt-12 gap-5 flex lg:pt-24">
+        <a href="mailto:thibault.boucardgarda@gmail.com"
+        className={buttonClass}>
+          <FontAwesomeIcon icon="envelope" className="mr-2 leading-none" />Contactez moi 
+        </a>
+        <a
+            href={monCV}
+            target="blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
+          >
+            <FontAwesomeIcon icon="download" className="mr-2 leading-none" />Mon CV
+          </a>
+
         </div>
       </div>
     </div>
