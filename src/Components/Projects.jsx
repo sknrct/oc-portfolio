@@ -37,7 +37,7 @@ const Projects = () => {
       <h2 className="my-20 text-center text-4xl">Projets</h2>
 
       {/* Filtres par technologies */}
-      <div className="mb-8 flex justify-center flex-wrap">
+      <div className="mb-8 flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
         {FILTERS.map((tech, index) => (
           <button
             key={index}
