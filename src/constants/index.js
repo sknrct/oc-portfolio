@@ -78,7 +78,7 @@ export const PROJECTS = [
     title: "EVOGYM",
     image: project9,
     description:
-      "Création d'une application web",
+      "Création d'une application web de gym",
     technologies: ["React", "TypeScript", "Tailwind", "FramerMotion"],
     cahierDesCharges: `Création d'une application web en utilisant React et TypeScript. L'application est moderne avec des animations, ainsi que responsive. Le code est optimisé afin de ne pas faire de répétitions. Il y'a un formulaire de contact qui vérifie les données saisies et signale une erreur le cas échéant.`,
     skills: `Approfondissement de React ainsi qu'une découverte de TypeScript.`,
