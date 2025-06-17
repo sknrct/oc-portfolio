@@ -39,6 +39,12 @@ export const EXPERIENCES = [
 
 export const FORMATIONS = [
   {
+    school: "Armée de l'Air et de l'Espace",
+    year: "En cours",
+    skills: ["Rigueur", "Dépassement de sois", "Engagement", "Autonomie"],
+    description: `Certificat d'aptitude militaire dans l'optique d'une spécialisation 8000 PDI - Technicien Développeur Informatique. Déclassement médical : Blessure aux genoux`,
+  },
+  {
     school: "OPENCLASSROOMS",
     year: "2023 - 2024",
     skills: ["Développement web", "Gestion de projet", "Debugg", "Optimisation"],
