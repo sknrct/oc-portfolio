@@ -39,13 +39,6 @@ export const EXPERIENCES = [
 
 export const FORMATIONS = [
   {
-    school: "CODELYNX",
-    year: "2024",
-    skills: ["Fondamentaux", "Composants", "Hooks", "Patterns", "Workshops"],
-    description: `Formation React afin de me perfectionner dans la pratique de ce framework 
-    à travers de nombreux exercices, tests et leçons.`,
-  },
-  {
     school: "OPENCLASSROOMS",
     year: "2023 - 2024",
     skills: ["Développement web", "Gestion de projet", "Debugg", "Optimisation"],

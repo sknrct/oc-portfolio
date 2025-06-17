@@ -24,16 +24,12 @@ const Introduction = () => {
               Thibault Garda
             </h1>
             <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-4xl tracking-tight text-transparent">
-              Développeur React Node.js
+              Développeur Web
             </span>
             <p className="my-2 max-w-xl py-4 text-lg text-left md:text-left">
-              Développeur web frontend avec une appétence pour le backend,
-              spécialisé en React et Node.js. Grâce à une solide expérience en
-              gestion de projet, design et référencement, j’apporte une vision
-              globale et créative aux projets que je mène.
+            Titulaire d'une formation en développement frontend, avec une forte appétence pour le backend, je suis de nature autodidacte. Mon master en communication, design et marketing m'a permis de développer des compétences variées qui font de moi un profil polyvalent, prêt à s'investir et à contribuer activement à vos projets.
             </p>
-            <p className="my-2 max-w-xl text-lg text-left md:text-left">Disponible à partir
-              de janvier 2025, je recherche une opportunité sur Nantes et ses
+            <p className="my-2 max-w-xl text-lg text-left md:text-left">Disponible dès maintenant, je recherche une opportunité sur Nantes et ses
               alentours pour m’investir dans des projets ambitieux et innovants.</p>
           </div>
         </div>
