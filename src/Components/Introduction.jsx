@@ -39,7 +39,7 @@ const Introduction = () => {
         <div className="w-full lg:w-1/2 lg:p-8 flex m-auto">
           <div className="flex justify-center flex-wrap">
             <img
-              className="rounded-2xl w-1/2 flex"
+              className="rounded-2xl w-3/4"
               src={porfilePic}
               alt="Une photo de profil"
             />
