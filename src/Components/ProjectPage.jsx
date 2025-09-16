@@ -44,8 +44,8 @@ const ProjectPage = () => {
             onClick={handleGoBack}
             className="p-1.5 rounded-lg text-m font-medium lg:mx-10 flex items-center justify-center mx-auto bg-neutral-900 text-orange-500"
           >
-            <FontAwesomeIcon icon="arrow-left" className="mr-2 leading-none" /> Retour aux
-            projets
+            <FontAwesomeIcon icon="arrow-left" className="mr-2 leading-none" />{" "}
+            Retour aux projets
           </button>
 
           <div className="container mx-auto px-8 flex flex-wrap items-center">
@@ -93,15 +93,6 @@ const ProjectPage = () => {
                   ) : (
                     <span>{project.cahierDesCharges}</span>
                   )}
-                </p>
-
-                {/* Problématiques rencontrées */}
-                <h2 className="text-3xl font-semibold text-orange-500 mb-4 text-left">
-                  Problématiques rencontrées
-                </h2>
-
-                <p className="mb-12 text-lg leading-relaxed text-neutral-400 text-left lg:text-left">
-                  {project.issues}
                 </p>
 
                 {/* Compétences acquises */}

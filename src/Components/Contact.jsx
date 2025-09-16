@@ -12,7 +12,7 @@ const Contact = () => {
        
         className="my-10 text-center text-4xl"
       >
-        Contactons nous !
+        Contactez moi !
       </h1>
       <div className="text-center tracking-tighter">
         <a href="mailto:thibault.boucardgarda@gmail.com" className="border-b ">
