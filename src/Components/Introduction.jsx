@@ -27,12 +27,12 @@ const Introduction = () => {
               Développeur Web
             </span>
             <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-2xl tracking-tight text-transparent">
-              En recherche d'un contrat d'emploi
+              En recherche d'un emploi
             </span>
             <p className="my-2 max-w-xl py-4 text-lg text-left md:text-left">
             Je suis à la recherche d’un employeur pour débuter ma carrière en tant que développeur. Formé en développement frontend et backend, je suis autodidacte, curieux et rigoureux. Mon objectif est de devenir un élément moteur pour votre équipe tout en me spécialisant.
             </p>
-            <p className="my-2 max-w-xl text-lg text-left md:text-left">Disponible dès maintenant, je recherche une opportunité sur Nantes et la région PACA pour m’investir dans des projets ambitieux et innovants.</p>
+            <p className="my-2 max-w-xl text-lg text-left md:text-left md:mb-10">Disponible dès maintenant, je recherche une opportunité sur Nantes et la région PACA pour m’investir dans des projets ambitieux et innovants.</p>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8 flex m-auto">

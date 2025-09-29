@@ -81,7 +81,8 @@ export const PROJECTS = [
     technologies: ["React", "TypeScript", "Tailwind", "FramerMotion"],
     cahierDesCharges: `Création d'une application web en utilisant React et TypeScript. L'application est moderne avec des animations, ainsi que responsive. Le code est optimisé afin de ne pas faire de répétitions. Il y'a un formulaire de contact qui vérifie les données saisies et signale une erreur le cas échéant.`,
     skills: `Approfondissement de React ainsi qu'une découverte de TypeScript.`,
-    githubLink: "https://github.com/sknrct/yoga-app"
+    githubLink: "https://yoga-app-7gg.pages.dev/",
+    buttonText: "Voir le site"
   },
   {
     id: 8,
