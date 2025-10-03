@@ -40,7 +40,7 @@ export const EXPERIENCES = [
 export const FORMATIONS = [
   {
     school: "Armée de l'Air et de l'Espace",
-    year: "Mai 2024 - Aout 2024",
+    year: "Mai 2025- Aout 2025",
     skills: ["Rigueur", "Dépassement de sois", "Engagement", "Autonomie"],
     description: `Certificat d'aptitude militaire dans l'optique d'une spécialisation 8000 - Technicien Informatique. Déclassement médical : Blessure aux genoux`,
   },
