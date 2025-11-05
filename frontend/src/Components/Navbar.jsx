@@ -92,6 +92,14 @@ const Navbar = () => {
             >
               <FontAwesomeIcon icon={faEnvelope} className={navClassIcon} />
             </a>
+            <a
+            href="/oc-portfolio/ajouter"
+            target="blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            Ajouter
+          </a>
           </div>
 
         {/* Burger Menu Icon */}

@@ -11,7 +11,8 @@ import Contact from "./Components/Contact";
 import Formation from "./Components/Formation";
 import BackToTop from "./Components/BackToTop";
 import ProjectPage from "./Components/ProjectPage";
-import ScrollToTop from "./Components/ScrollToTop"; // Import du nouveau composant
+import ScrollToTop from "./Components/ScrollToTop";
+import Ajouter from "./Components/AddProject";
 
 const MainPage = () => (
   <div className="container mx-auto px-8">
@@ -51,6 +52,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/project/:id" element={<ProjectPage />} />
+        <Route path="/ajouter" element={<Ajouter />} />
       </Routes>
     </div>
   </Router>
