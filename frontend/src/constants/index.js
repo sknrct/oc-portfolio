@@ -7,6 +7,8 @@ import project6 from "../assets/projects/vieux-grimoire.webp";
 import project7 from "../assets/projects/portfolio.webp";
 import project8 from "../assets/projects/ccdfr.webp";
 import project9 from "../assets/projects/evogym.png";
+import project10 from "../assets/projects/portfolio.webp";
+import project11 from "../assets/projects/portfolio.webp";
 
 
 export const INTRO_CONTENT = `Développeur web frontend avec une appétence pour le backend, spécialisé en React et Node.js. Grâce à une solide expérience en gestion de projet, design et référencement, j’apporte une vision globale et créative aux projets que je mène. Disponible à partir de janvier 2025, je recherche une opportunité sur Nantes et ses alentours pour m’investir dans des projets ambitieux et innovants.`;
@@ -72,13 +74,36 @@ export const FORMATIONS = [
 ];
 
 export const PROJECTS = [
+   {
+    id: 11,
+    title: "Fullstack Expense",
+    image: project11,
+    description:
+      "Création d'une application de gestion de dépense avec React et Django",
+    technologies: ["React", "Django", "TypeScript","Frontend", "Backend", "Tailwind"],
+    cahierDesCharges: `Création d'une application web de gestion de dépense fullstack avec React et Django. L'utilisateur peut ajouter, supprimer et modifier ces dépenses. Une barre montre le ratio des dépenses par rapport aux revenus ainsi que le total du solde disponible et des dépenses faites. L'UI est gérée avec des composants de DaisyUI ainsi que Lucid React pour les logos. L'authenticité des données est possible grâce à des tokens générés automatiquement permettant d'éviter les doublons ou les erreurs lors de la saisie.`,
+    skills: `Approfondissement de React ainsi que de TypeScript. Approfondissement de Django pour créer une application fullstack complète.`,
+    githubLink: "https://github.com/sknrct/fullstack-expense",
+  },
+  {
+    id: 10,
+    title: "Todolist",
+    image: project10,
+    description:
+      "Création d'une todolist en React et TypeScript",
+    technologies: ["React", "TypeScript", "Tailwind","Frontend"],
+    cahierDesCharges: `Création d'une todolist en utilisant React, TypeScript et DaisyUI. L'application est moderne via l'utilisation de composants élégants provenant de DaisyUI.`,
+    skills: `Approfondissement de React ainsi que de TypeScript. Découverte de DaisyUI, une bibliothèque de composants basée sur Tailwind CSS.`,
+    githubLink: "https://sknrct.github.io/todolist/",
+    buttonText: "Voir le site"
+  },
   {
     id: 9,
-    title: "EVOGYM",
+    title: "Evogym",
     image: project9,
     description:
       "Création d'une application web de gym",
-    technologies: ["React", "TypeScript", "Tailwind", "FramerMotion"],
+    technologies: ["React", "TypeScript", "Tailwind", "Frontend"],
     cahierDesCharges: `Création d'une application web en utilisant React et TypeScript. L'application est moderne avec des animations, ainsi que responsive. Le code est optimisé afin de ne pas faire de répétitions. Il y'a un formulaire de contact qui vérifie les données saisies et signale une erreur le cas échéant.`,
     skills: `Approfondissement de React ainsi qu'une découverte de TypeScript.`,
     githubLink: "https://yoga-app-7gg.pages.dev/",
@@ -94,7 +119,8 @@ export const PROJECTS = [
     cahierDesCharges: [ `Dans le cadre de mon alternance chez`, { text: " Infoconception ", link: "https://www.infoconception.fr" }, `j'ai du créer plusieurs sites web notamment celui-ci à partir d'un thème WordPress. Il y'a eu du développement spécifique avec la création d'une calculatrice de prêt immobilier`,
   ],
     skills: `Je suis assez fier de cette calculatrice car j'ai dû apprendre en faisant et j'ai finalement réussi à obtenir un résultat qui me convient et qui convient au client. Je me suis senti plus autonome en PHP par la suite. J'ai appris à utiliser des ACF (Advanced Custom Field), un plugin WordPress qui permet d'appeler des champs de données, de la même manière qu'un JSON.`,
-    githubLink: "https://www.creditcourtierdefrance.com/"
+    githubLink: "https://www.creditcourtierdefrance.com/",
+    buttonText: "Voir le site"
   },
   {
     id: 7,
@@ -102,7 +128,7 @@ export const PROJECTS = [
     image: project7,
     description:
       "Création et publication d'un portfolio de développeur.",
-    technologies: ["React", "Tailwind", "Vite"],
+    technologies: ["React", "Tailwind", "Frontend"],
     cahierDesCharges: `Voici le projet que j'attendais le plus ! En effet, cela fait longtemps que je souhaite créer un portfolio. Celui-ci pouvait être fait avec la technologie de mon choix, c'est donc naturellement que j'ai choisis React ! Pour le style, j'ai opté pour Tailwind, j'étais très curieux de tester cette technologie dont j'ai beaucoup entendu parler. Le portfolio doit présenter au moins deux projets et présenter de manière claire mes compétences et mon parcours en développement... Mais pas que. Évidemment le référencement et le responsive doivent être présent, ainsi qu'un code optimisé.`,
     skills: `Avec ce projet, j'ai pu approfondir un peu plus l'usage de React, consolider certains acquis et apprendre de nouvelles choses. J'ai aussi pu découvrir Tailwind que j'ai trouvé très pratique et avec une documentation particulièrement claire. Enfin la notion principale, le temps, j'ai dû gérer ce facteur important via une organisation la plus précise possible.`,
     githubLink: "https://github.com/sknrct/oc-portfolio"
@@ -193,6 +219,9 @@ export const FILTERS = [
   "Express",
   "Debugg",
   "AJAX",
+  "Django",
+  "WordPress",
+  "TypeScript"
 ];
 
 export const CONTACT = {

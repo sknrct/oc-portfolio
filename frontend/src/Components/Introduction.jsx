@@ -30,7 +30,7 @@ const Introduction = () => {
               En recherche d'un emploi
             </span>
             <p className="my-2 max-w-xl py-4 text-lg text-left md:text-left">
-            Je suis à la recherche d’un employeur pour débuter ma carrière en tant que développeur. Formé en développement frontend et backend, je suis autodidacte, curieux et rigoureux. Mon objectif est de devenir un élément moteur pour votre équipe tout en me spécialisant.
+            Je suis à la recherche d’une opportunité en tant que développeur. Formé en développement frontend et backend, je suis un autodidacte passionné par la technique. Le développement me permet d’allier créativité et rigueur, tout en apportant des solutions concrètes aux enjeux du marché. 
             </p>
             <p className="my-2 max-w-xl text-lg text-left md:text-left md:mb-10">Disponible dès maintenant, je recherche une opportunité sur Nantes et la région PACA pour m’investir dans des projets ambitieux et innovants.</p>
           </div>
