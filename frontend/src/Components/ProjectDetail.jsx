@@ -1,13 +1,18 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PROJECTS } from "../constants";
 
 const ProjectDetail = () => {
-  const { id } = useParams(); // Récupère l'ID du projet depuis l'URL
-  const project = PROJECTS.find((project) => project.id === parseInt(id)); // Trouve le projet correspondant
+  const { id } = useParams();
+  const [project, setProject] = useState(null);
 
-  if (!project) {
-    return <p>Projet non trouvé</p>;
-  }
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8000/api/projects/${id}/`)
+      .then((res) => res.json())
+      .then((data) => setProject(data))
+      .catch((err) => console.error("Erreur fetch projet :", err));
+  }, [id]);
+
+  if (!project) return <p>Chargement du projet...</p>;
 
   return (
     <div>

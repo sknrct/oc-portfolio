@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Navbar from "./Navbar";
 import { FILTERS } from "../constants";
+import toast from "react-hot-toast";
 
 const formClass = "p-2 border border-gray-500 rounded bg-transparent focus:ring-2 focus:ring-orange-600 outline-none"
 
@@ -12,21 +13,50 @@ function Ajouter() {
 
   const technologies = FILTERS.filter((tech) => tech !== "All");
 
-  const onSubmit = (data) => {
+  const onSubmit =  async (data) => {
     const formData = new FormData();
     formData.append("title", data.title);
+    formData.append("cahier_des_charges", data.cahierDesCharges);
+    formData.append("skills", data.skills);
     formData.append("description", data.description);
     formData.append("github", data.github);
+    formData.append("website", data.website);
     formData.append("image", data.image[0]);
     formData.append("technologies", JSON.stringify(selectedTechs));
 
-    console.log("Envoi :", Object.fromEntries(formData))
-    // TODO: fetch POST vers le back
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/projects/", {
+        method: "POST",
+        body: formData
+      });
 
-    reset();
-    SetPreview(null);
-    setSelectedTechs([]);
-  };
+      if (!response.ok) throw new Error("Erreur lors de l'envoi");
+      toast('Success',
+        {
+          icon: '✅',
+          style: {
+            borderRadius: '10px',
+            background: 'black',
+            color: '#f97316',
+          },
+        }
+      );
+      reset()
+      SetPreview(null)
+      setSelectedTechs([])
+    } catch (err) {
+      console.error(err)
+      toast('Error',
+        {
+          icon: '❌',
+          style: {
+            borderRadius: '10px',
+            background: 'black',
+            color: '#f97316',
+          },
+        }
+      );
+    }}
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -63,28 +93,34 @@ function Ajouter() {
             className={formClass}
           />
           <input
-            {...register("cahierDesCharges")}
-            placeholder="Cahier des charges"
-            className={formClass}
-
-          />
-          <input
-            {...register("skills")}
-            placeholder="Skills"
-            className={formClass}
-
-          />
-          <textarea
             {...register("description")}
             placeholder="Description"
             className={formClass}
 
           />
+          <textarea
+            {...register("cahierDesCharges")}
+            placeholder="Cahier des charges"
+            className={formClass}
+
+          />
+          <textarea
+            {...register("skills")}
+            placeholder="Skills"
+            className={formClass}
+
+          />
+          
           <input
             {...register("github")}
             placeholder="Lien GitHub"
             className={formClass}
 
+          />
+          <input
+            {...register("website")}
+            placeholder="Lien du site"
+            className={formClass}
           />
           <input
             type="file"

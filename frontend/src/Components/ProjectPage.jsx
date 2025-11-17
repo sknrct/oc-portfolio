@@ -1,9 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { PROJECTS } from "../constants";
 import Navbar from "./Navbar";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -12,9 +9,9 @@ library.add(faArrowLeft);
 
 const ProjectPage = () => {
   const { id } = useParams();
-  const project = PROJECTS.find((proj) => proj.id === parseInt(id));
-  const [hasAnimated, setHasAnimated] = useState(false);
   const navigate = useNavigate();
+  const [project, setProject] = useState(null); // 🔹 on utilise state pour le projet
+  const [loading, setLoading] = useState(true); // optionnel : loader
 
   const handleGoBack = () => {
     navigate(-1);
@@ -22,9 +19,33 @@ const ProjectPage = () => {
 
   useEffect(() => {
     if (window.location.hash) {
-      window.history.replaceState(null, null, window.location.pathname); // Supprime le hash de l'URL
+      window.history.replaceState(null, null, window.location.pathname);
     }
-  }, []);
+
+    // 🔹 Fetch du projet depuis Django
+    fetch(`http://127.0.0.1:8000/api/projects/${id}/`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Projet non trouvé");
+        return res.json();
+      })
+      .then((data) => {
+        setProject(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="text-center mt-20 text-white">
+        <Navbar />
+        Chargement du projet...
+      </div>
+    );
+  }
 
   if (!project) {
     return (
@@ -58,7 +79,7 @@ const ProjectPage = () => {
 
                 {/* Liste des technologies utilisées */}
                 <div className="mb-8 flex flex-wrap gap-2 justify-center lg:justify-start">
-                  {project.technologies.map((tech, index) => (
+                  {project.technologies?.map((tech, index) => (
                     <span
                       key={index}
                       className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-orange-500"
@@ -74,8 +95,8 @@ const ProjectPage = () => {
                 </h2>
 
                 <p className="mb-12 text-lg leading-relaxed text-neutral-400 text-left lg:text-left">
-                  {Array.isArray(project.cahierDesCharges) ? (
-                    project.cahierDesCharges.map((part, index) =>
+                  {Array.isArray(project.cahier_des_charges) ? (
+                    project.cahier_des_charges.map((part, index) =>
                       typeof part === "string" ? (
                         <span key={index}>{part}</span>
                       ) : (
@@ -91,7 +112,7 @@ const ProjectPage = () => {
                       )
                     )
                   ) : (
-                    <span>{project.cahierDesCharges}</span>
+                    <span>{project.cahier_des_charges}</span>
                   )}
                 </p>
 
@@ -115,16 +136,18 @@ const ProjectPage = () => {
                   alt={project.title}
                 />
                 {/* Bouton voir le projet */}
-                <div className="text-center flex justify-center mt-8">
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-orange-500 text-white px-10 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300 text-lg"
-                  >
-                    {project.buttonText || "Github"}  
-                  </a>
-                </div>
+                {(project.github || project.website) && (
+                  <div className="text-center flex justify-center mt-8">
+                    <a
+                      href={project.website || project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-orange-500 text-white px-10 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300 text-lg"
+                    >
+                      {project.website ? "Voir le site" : "Github"}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

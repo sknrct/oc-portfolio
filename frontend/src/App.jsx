@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import Navbar from "./Components/Navbar";
 import Introduction from "./Components/Introduction";
@@ -49,6 +50,7 @@ const App = () => (
         <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(253,118,0,0.3),rgba(255,255,255,0))]"></div>
       </div>
       <ScrollToTop /> {/* Ajoute ce composant ici */}
+      <Toaster />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/project/:id" element={<ProjectPage />} />
